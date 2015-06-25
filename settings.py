@@ -335,7 +335,7 @@ FABRIC = {
     "REPO_URL": "https://github.com/hobson/mez.git",       # Project's repo URL
     "VIRTUALENV_HOME":  "/root/.virtualenvs",  # Absolute remote path for virtualenvs
     "PROJECT_NAME": "mez",                         # Unique identifier for project
-    "REQUIREMENTS_PATH": "totalgood/requirements.txt",       # Project's pip requirements
+    "REQUIREMENTS_PATH": "requirements.txt",       # Project's pip requirements
     "GUNICORN_PORT": 8000,                         # Port gunicorn will listen on
     "LOCALE": "en_US.UTF-8",                       # Should end with ".UTF-8"
     "DB_PASS": os.getenv('DB_PASSWORD'),           # Live database password
