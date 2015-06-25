@@ -102,7 +102,7 @@ MANAGERS = ADMINS
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['totalgood.com', 'totalgood.org', 'semilar.com',
+ALLOWED_HOSTS = ['*', 'totalgood.com', 'totalgood.org', 'semilar.com',
                  'www.totalgood.com', 'www.totaltood.org', 'www.semilar.com']
 
 # Local time zone for this installation. Choices can be found here:
@@ -330,7 +330,7 @@ OPTIONAL_APPS = (
 
 FABRIC = {
     "SSH_USER": os.getenv('MEZ_SSH_USER'),         # SSH username for host deploying to
-    "HOSTS": ALLOWED_HOSTS[:1],                    # List of hosts to deploy to (eg, first host)
+    "HOSTS": 'www.totalgood.com',                    # List of hosts to deploy to (eg, first host)
     "DOMAINS": ALLOWED_HOSTS,                      # Domains for public site
     "REPO_URL": "https://github.com/hobson/mez.git",       # Project's repo URL
     "VIRTUALENV_HOME":  "/opt/.virtualenvs",  # Absolute remote path for virtualenvs
