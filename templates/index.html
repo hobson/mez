@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{# {% block meta_title %}{% trans "Home" %}{% endblock %} #}
+{% block meta_title %}{% trans "Home" %}{% endblock %}
 {% block title %}{% trans "Home" %}{% endblock %}
 
 {% block breadcrumb_menu %}
@@ -12,13 +12,17 @@
 {% blocktrans %}
 <h2>Join Us!</h2>
 <p>
-    If you're passionate about leaving the world a little better than you found it, join us! We are increasing the total good bit by bit. We need developers, designers, engineers, economists, and statisticians who care about more than just improving the precision of targeted advertising or the predictive power of financial trading bots. We harness Machine Intelligence to serve the greater good.
+    If you're passionate about using Machine Learning to leave the world a little better than we found it, you should join us! We're increasing the total good bit by bit. We need developers, designers, engineers, economists, communicators, videographers, and statisticians who care about more than just targeted advertising or financial trading bots. If you have ideas for harnessing Machine Intelligence to serve the greater good we're all ears. For example, we're working this summer to increase government financial transparency by mining the transaction data for Portland Oregon and the rest of the state. And we're building an automated learning tool to allow public servants to build predictive models without having to learn statistics or computer science.
+
+    And we don't hold back. Everything we do is open source, open data, open science. All IP is donated to the public domain or licensed to the public free of charge.
 </p>
-  We contribute to
+  Some software projects we contribute to
 <ul>
-    <li><a href="http://github.com/totalgood/pug">PUG</a>Open Source Data Munging Tools</li>
-    <li><a href="http://github.com/pybrain2/pybrain2">PyBrain2</a>Versatile framework for Deep Learning</li>
-    <li><a href="http://github.com/totalgood/pug-nlp">PUG-NLP</a>Simple Natural Language Processing</li>
+    <table>
+      <tr><td><a href="http://github.com/totalgood/pug">PUG</a></td><td>PDX Python User Group data tools</td></tr>
+      <tr><td><a href="http://github.com/pybrain2/pybrain2">PyBrain2</a><td>versatile framework for Deep Learning</td></tr>
+      <tr><td><a href="http://github.com/totalgood/pug-nlp">PUG-NLP</a></td><td>Natural Language Processing simplified</td></tr>
+    <li></li>
 </ul>
 {% endblocktrans %}
 {% endblock %}
