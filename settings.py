@@ -102,8 +102,8 @@ MANAGERS = ADMINS
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['*', 'totalgood.com', 'totalgood.org', 'semilar.com',
-                 'www.totalgood.com', 'www.totaltood.org', 'www.semilar.com']
+ALLOWED_HOSTS = ['*']  # , 'totalgood.com', 'totalgood.org', 'semilar.com',
+                       #  'www.totalgood.com', 'www.totaltood.org', 'www.semilar.com']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -261,7 +261,7 @@ INSTALLED_APPS = (
     "mezzanine.galleries",
     "mezzanine.twitter",
     #"mezzanine.accounts",
-    #"mezzanine.mobile",
+    "mezzanine.mobile",
 )
 
 # List of processors used by RequestContext to populate the context.
@@ -330,8 +330,9 @@ OPTIONAL_APPS = (
 
 FABRIC = {
     "SSH_USER": os.getenv('MEZ_SSH_USER'),         # SSH username for host deploying to
-    "HOSTS": 'www.totalgood.com',                    # List of hosts to deploy to (eg, first host)
-    "DOMAINS": ALLOWED_HOSTS,                      # Domains for public site
+    "HOSTS": 'totalgood.com',                      # List of hosts to deploy to (eg, first host)
+    # Domains for public site
+    "DOMAINS": ['totalgood.com', 'www.totalgood.com', 'totalgood.org', 'www.totalgood.org'],
     "REPO_URL": "https://github.com/hobson/mez.git",       # Project's repo URL
     "VIRTUALENV_HOME":  "/opt/.virtualenvs",  # Absolute remote path for virtualenvs
     "PROJECT_NAME": "mez",                         # Unique identifier for project
