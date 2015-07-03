@@ -11,6 +11,7 @@ nohup.out
 *.bak
 *.orig
 *.old.*
+fixtures/mez.json
 *.bak.*
 *.orig.*
 *.pyc
