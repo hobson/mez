@@ -331,7 +331,7 @@ FABRIC = {
     "SSH_USER": os.getenv('MEZ_SSH_USER'),         # SSH username for host deploying to
     "HOSTS": 'totalgood.com',                      # List of hosts to deploy to (eg, first host)
     # Domains for public site
-    "DOMAINS": ['totalgood.com'],
+    "DOMAINS": ['*.totalgood.com', '*.totalgood.org'],
     "REPO_URL": "https://github.com/hobson/mez.git",       # Project's repo URL
     "VIRTUALENV_HOME":  "/opt/.virtualenvs",  # Absolute remote path for virtualenvs
     "PROJECT_NAME": "mez",                         # Unique identifier for project
