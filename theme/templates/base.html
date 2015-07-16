@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
 <meta name="description" content="{% block meta_description %}{% endblock %}">
-<title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+<title>{% if settings.SITE_TITLE %}{{ settings.SITE_TITLE }} - {% endif %}{% block meta_title %}{% endblock %}</title>
 <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
 
 {% ifinstalled mezzanine.blog %}
@@ -70,7 +70,7 @@
                         <span class="icon-bar"></span>
                     </button>
   {% if settings.SITE_TITLE %}<a class="navbar-brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
-    
+
 </div>
 <div class="navbar-collapse collapse">
        {% page_menu "pages/menus/dropdown.html" %}
@@ -150,13 +150,13 @@
     {% include "includes/user_panel.html" %}
     {% endnevercache %}
 	<aside class="right-sidebar">
-   
+
     {% block right_panel %}
     {% ifinstalled mezzanine.twitter %}
     {% include "twitter/tweets.html" %}
     {% endifinstalled %}
     {% endblock %}
-    
+
 	</aside>
 </div>
 {% endblock %}
@@ -185,7 +185,7 @@
 						<li><a title="" data-placement="top" href="#" data-original-title="Google plus"><i class="fa fa-google-plus"></i></a></li>
 					</ul>
 				</div>
-		
+
 
 </div>
 </div>
