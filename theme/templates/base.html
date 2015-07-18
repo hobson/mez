@@ -9,8 +9,11 @@
 <meta name="description" content="{% block meta_description %}{% endblock %}">
 <title>{% if settings.SITE_TITLE %}{{ settings.SITE_TITLE }} - {% endif %}{% block meta_title %}{% endblock %}</title>
 <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+ -->
+
 
 {% ifinstalled mezzanine.blog %}
 <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
