@@ -330,6 +330,14 @@ OPTIONAL_APPS = (
 # These settings are used by the default fabfile.py provided.
 # Check fabfile.py for defaults.
 
+TWITTER_ACCESS_TOKEN_KEY = ''
+TWITTER_ACCESS_TOKEN_SECRET = ''
+TWITTER_CONSUMER_KEY = os.getenv('TWITTER_CONSUMER_KEY')
+TWITTER_CONSUMER_SECRET = os.getenv('TWITTER_CONSUMER_SECRET')
+TWITTER_DEFAULT_NUM_TWEETS = 3
+TWITTER_DEFAULT_QUERY = 'from:hobsonlane totalgood'
+TWITTER_DEFAULT_QUERY_TYPE = 'search'  # 'list' or 'search'
+
 FABRIC = {
     "SSH_USER": os.getenv('MEZ_SSH_USER'),         # SSH username for host deploying to
     "HOSTS": 'totalgood.com',                      # List of hosts to deploy to (eg, first host)
