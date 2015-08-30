@@ -253,6 +253,7 @@ INSTALLED_APPS = (
 
     "theme",
 
+    "mezzanine_pagedown",
     "mezzanine.boot",
     "mezzanine.conf",
     "mezzanine.core",
@@ -264,6 +265,7 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     "mezzanine.accounts",
     "mezzanine.mobile",
+
 )
 
 # List of processors used by RequestContext to populate the context.
@@ -335,7 +337,7 @@ TWITTER_ACCESS_TOKEN_SECRET = os.getenv('TWITTER_ACCESS_TOKEN_SECRET')
 TWITTER_CONSUMER_KEY = os.getenv('TWITTER_CONSUMER_KEY')
 TWITTER_CONSUMER_SECRET = os.getenv('TWITTER_CONSUMER_SECRET')
 TWITTER_DEFAULT_NUM_TWEETS = 3
-TWITTER_DEFAULT_QUERY = 'from:hobsonlane totalgood'
+TWITTER_DEFAULT_QUERY = 'from:goodtotal totalgood'
 TWITTER_DEFAULT_QUERY_TYPE = 'search'  # 'list' or 'search'
 
 FABRIC = {
