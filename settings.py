@@ -3,6 +3,7 @@ from __future__ import absolute_import, unicode_literals
 import os
 
 SITE_TITLE = "TotalGood"
+SITE_LOGO = "Total=Good"
 SITE_TAGLINE = "Adding to the greater good, bit by bit."
 NEVERCACHE_KEY = os.getenv('MEZ_NEVERCACHE_KEY')
 SECRET_KEY = os.getenv('DJ_SECRET_KEY')
