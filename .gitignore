@@ -23,4 +23,3 @@ fixtures/
 .coverage
 local_settings.py
 secret_settings.py
-/static
