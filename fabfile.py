@@ -57,6 +57,11 @@ env.reqs_path = conf.get("REQUIREMENTS_PATH", None)
 env.gunicorn_port = conf.get("GUNICORN_PORT", 8000)
 env.locale = conf.get("LOCALE", "en_US.UTF-8")
 
+env.twitter_consumer_key = conf.get('TWITTER_CONSUMER_KEY', '')
+env.twitter_consumer_secret = conf.get('TWITTER_CONSUMER_SECRET, '')
+env.twitter_access_token_key = conf.get('TWITTER_ACCESS_TOKEN_KEY, '')
+env.twitter_access_token_secret = conf.get('TWITTER_ACCESS_TOKEN_SECRET', '')
+
 env.secret_key = conf.get("SECRET_KEY", "")
 env.nevercache_key = conf.get("NEVERCACHE_KEY", "")
 
@@ -494,12 +499,12 @@ def deploy():
             print("\nAborting!")
             return False
         create()
-    rsync_project(
-        env.venv_path,
-        local_dir='.totalgood.env',
-        delete=True,
-        extra_opts='--omit-dir-times',
-    )
+    # rsync_project(
+    #     env.venv_path,
+    #     local_dir='.totalgood.env',
+    #     delete=True,
+    #     extra_opts='--omit-dir-times',
+    # )
     for name in get_templates():
         upload_template_and_reload(name)
     with project():
@@ -510,7 +515,7 @@ def deploy():
         git = env.git
         last_commit = "git rev-parse HEAD" if git else "hg id -i"
         run("%s > last.commit" % last_commit)
-        run(".totalgood.env/.totalgood.env")
+        # run(".totalgood.env/.totalgood.env")
         with update_changed_requirements():
             run("git fetch origin master && git reset --hard origin/master" if git else "hg pull && hg up -C")
             # run("git pull origin master -f" if git else "hg pull && hg up -C")

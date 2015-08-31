@@ -4,6 +4,11 @@ SECRET_KEY = "%(secret_key)s"
 NEVERCACHE_KEY = "%(nevercache_key)s"
 # ALLOWED_HOSTS = [%(domains_python)s]
 
+TWITTER_CONSUMER_KEY = "%(twitter_consumer_key)s"
+TWITTER_CONSUMER_SECRET = "%(twitter_consumer_secret)s"
+TWITTER_ACCESS_TOKEN_KEY = "%(twitter_access_token_key)s"
+TWITTER_ACCESS_TOKEN_SECRET = "%(twitter_access_token_secret)s"
+
 DATABASES = {
     "default": {
         # Ends with "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
