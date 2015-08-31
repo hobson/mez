@@ -17,6 +17,7 @@ fixtures/
 *.pyc
 *.pyo
 *.db
+*.env
 .DS_Store
 .coverage
 local_settings.py

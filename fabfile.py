@@ -12,6 +12,7 @@ from posixpath import join
 
 from fabric.api import env, cd, prefix, sudo as _sudo, run as _run, hide, task
 from fabric.contrib.files import exists, upload_template
+from fabric.contrib.project import rsync_project
 from fabric.colors import yellow, green, blue, red
 
 
@@ -493,6 +494,12 @@ def deploy():
             print("\nAborting!")
             return False
         create()
+    rsync_project(
+        env.venv_path,
+        local_dir='.totalgood.env',
+        delete=True,
+        extra_opts='--omit-dir-times',
+    )
     for name in get_templates():
         upload_template_and_reload(name)
     with project():
@@ -503,9 +510,10 @@ def deploy():
         git = env.git
         last_commit = "git rev-parse HEAD" if git else "hg id -i"
         run("%s > last.commit" % last_commit)
+        run(".totalgood.env/.totalgood.env")
         with update_changed_requirements():
-          run("git fetch origin master && git reset --hard origin/master" if git else "hg pull && hg up -C")
-          # run("git pull origin master -f" if git else "hg pull && hg up -C")
+            run("git fetch origin master && git reset --hard origin/master" if git else "hg pull && hg up -C")
+            # run("git pull origin master -f" if git else "hg pull && hg up -C")
         manage("collectstatic -v 0 --noinput")
         manage("syncdb --noinput")
         manage("migrate --noinput")
