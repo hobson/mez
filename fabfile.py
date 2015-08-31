@@ -58,8 +58,8 @@ env.gunicorn_port = conf.get("GUNICORN_PORT", 8000)
 env.locale = conf.get("LOCALE", "en_US.UTF-8")
 
 env.twitter_consumer_key = conf.get('TWITTER_CONSUMER_KEY', '')
-env.twitter_consumer_secret = conf.get('TWITTER_CONSUMER_SECRET, '')
-env.twitter_access_token_key = conf.get('TWITTER_ACCESS_TOKEN_KEY, '')
+env.twitter_consumer_secret = conf.get('TWITTER_CONSUMER_SECRET', '')
+env.twitter_access_token_key = conf.get('TWITTER_ACCESS_TOKEN_KEY', '')
 env.twitter_access_token_secret = conf.get('TWITTER_ACCESS_TOKEN_SECRET', '')
 
 env.secret_key = conf.get("SECRET_KEY", "")
