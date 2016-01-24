@@ -266,7 +266,15 @@ INSTALLED_APPS = (
     "mezzanine.accounts",
     "mezzanine.mobile",
 
+    "mdown",
+
 )
+
+import mdown.forms
+import mdown.filters
+
+RICHTEXT_WIDGET_CLASS = mdown.forms.WmdWidget
+RICHTEXT_FILTER = mdown.filters.codehilite
 
 # List of processors used by RequestContext to populate the context.
 # Each one should be a callable that takes the request object as its
